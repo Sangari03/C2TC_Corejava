@@ -1,27 +1,23 @@
 package array;
 
-public class array2 {
+public class array2{
+	    public static void main(String[] args) {
+	        int[] arr = {1, 0, 2, 0, 3, 0, 4, 0};
+	        int n = arr.length;
+	        int count = 0;
 
+	        for (int i = 0; i < n; i++) {
+	            if (arr[i] != 0) {
+	                arr[count++] = arr[i];
+	            }
+	        }
+	        while (count < n) {
+	            arr[count++] = 0;
+	        }
 
-
-	public static void main(String[] args) {
-		// declares an Array of integers.
-		array2[] arr;
-		// allocating memory for 5 objects of type Student.
-		arr = new array2[5];
-		// initialize the first elements of the array
-		arr[0] = new array2();
-		// initialize the second elements of the array
-		arr[1] = new array2();
-		// so on...
-		arr[2] = new array2();
-		arr[3] = new array2();
-		arr[4] = new array2();
-		
-		// accessing the elements of the specified array
-		for (int i = 0; i < arr.length; i++)
-			System.out.println();
+	        System.out.println("Array after moving zeroes: " + java.util.Arrays.toString(arr));
+	    }
 	}
 
-}
+
 
